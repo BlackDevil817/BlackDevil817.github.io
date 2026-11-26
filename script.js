@@ -302,11 +302,32 @@ document.addEventListener("keydown", (event) => {
 
 const certModal = document.querySelector("#cert-modal");
 const certModalClose = document.querySelector("[data-close-cert-modal]");
+const certModalImage = certModal?.querySelector(".cert-modal-image");
+const certModalPdf = certModal?.querySelector(".cert-modal-pdf");
 let certModalOpener;
 
 function openCertModal(opener) {
   if (!certModal) return;
   certModalOpener = opener;
+  const src = opener?.dataset.certSrc;
+  const alt = opener?.dataset.certAlt || "Certificate";
+  const isPdf = opener?.dataset.certType === "pdf";
+
+  if (isPdf && certModalPdf && src) {
+    if (certModalImage) certModalImage.hidden = true;
+    certModalPdf.hidden = false;
+    certModalPdf.src = `${src}#toolbar=0&navpanes=0`;
+    certModalPdf.title = alt;
+  } else if (certModalImage) {
+    if (certModalPdf) {
+      certModalPdf.hidden = true;
+      certModalPdf.src = "";
+    }
+    certModalImage.hidden = false;
+    if (src) certModalImage.src = src;
+    certModalImage.alt = alt;
+  }
+
   certModal.classList.add("open");
   certModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";

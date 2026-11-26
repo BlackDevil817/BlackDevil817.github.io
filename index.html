@@ -28,7 +28,9 @@
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#achievements">Achievements</a>
-        <a class="resume-link" href="./assets/Atharva-Joshi-Resume.pdf" download>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a class="resume-link" href="./assets/RESUME.pdf" download="Atharva-Joshi-Resume.pdf">
           Résumé <span>↓</span>
         </a>
       </nav>
@@ -55,7 +57,9 @@
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#achievements">Achievements</a>
-        <a href="./assets/Atharva-Joshi-Resume.pdf" download>Download résumé ↓</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a href="./assets/RESUME.pdf" download="Atharva-Joshi-Resume.pdf">Download résumé ↓</a>
       </nav>
     </header>
 
@@ -81,7 +85,7 @@
               Selected work
               <span aria-hidden="true">↘</span>
             </a>
-            <a class="text-link" href="./assets/Atharva-Joshi-Resume.pdf" download>
+            <a class="text-link" href="./assets/RESUME.pdf" download="Atharva-Joshi-Resume.pdf">
               View résumé <span>↓</span>
             </a>
           </div>
@@ -139,7 +143,6 @@
 
       <section class="about section" id="about" aria-labelledby="about-title">
         <div class="section-heading reveal">
-          <p class="section-index">About</p>
           <h2 id="about-title">Curious by nature.<br />Precise by practice.</h2>
         </div>
 
@@ -193,7 +196,6 @@
 
       <section class="achievements section" id="achievements" aria-labelledby="achievement-title">
         <div class="section-heading reveal">
-          <p class="section-index">Achievements</p>
           <h2 id="achievement-title">Built under pressure.</h2>
         </div>
 
@@ -265,6 +267,57 @@
         </div>
       </section>
 
+      <section class="certifications section" id="certifications" aria-labelledby="certifications-title">
+        <div class="section-heading reveal">
+          <h2 id="certifications-title">Verified milestones.</h2>
+        </div>
+
+        <div class="certifications-grid reveal">
+          <button
+            type="button"
+            class="cert-card"
+            data-open-cert-modal
+            data-cert-src="./assets/bah-certificate.pdf"
+            data-cert-type="pdf"
+            data-cert-alt="Bharatiya Antariksh Hackathon Participation Certificate"
+          >
+            <div class="cert-card-media">
+              <iframe
+                class="cert-card-pdf"
+                src="./assets/bah-certificate.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=0"
+                title="Bharatiya Antariksh Hackathon Participation Certificate"
+                scrolling="no"
+                tabindex="-1"
+              ></iframe>
+            </div>
+            <div class="cert-card-body">
+              <p>Space innovation hackathon</p>
+              <h3>BAH Participation Certificate</h3>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            class="cert-card"
+            data-open-cert-modal
+            data-cert-src="./assets/data-vista-certificate.jpg"
+            data-cert-alt="Data Vista 2026 Certificate"
+          >
+            <div class="cert-card-media">
+              <img
+                src="./assets/data-vista-certificate.jpg"
+                alt="Data Vista 2026 Certificate"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-card-body">
+              <p>Data Vista Ideathon · CSE Department</p>
+              <h3>Data Vista Certificate</h3>
+            </div>
+          </button>
+        </div>
+      </section>
+
       <!-- Certificate Modal with Blurred Background -->
       <div
         id="cert-modal"
@@ -288,12 +341,16 @@
             src="./assets/data-vista-certificate.jpg"
             alt="Data Vista 2026 Certificate"
           />
+          <iframe
+            class="cert-modal-pdf"
+            title="Certificate Preview"
+            hidden
+          ></iframe>
         </div>
       </div>
 
-      <section class="contact section" aria-labelledby="contact-title">
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner reveal">
-          <p class="section-index">Contact</p>
           <h2 id="contact-title">Have an opportunity<br />or just want to connect?</h2>
           <a class="contact-email" href="mailto:atharvajoshi20060708@gmail.com">
             atharvajoshi20060708@gmail.com
@@ -303,7 +360,7 @@
             <span>Copy email</span>
             <i aria-hidden="true">↗</i>
           </button>
-          <a class="contact-resume" href="./assets/Atharva-Joshi-Resume.pdf" download>
+          <a class="contact-resume" href="./assets/RESUME.pdf" download="Atharva-Joshi-Resume.pdf">
             Download my résumé <span>↓</span>
           </a>
         </div>
