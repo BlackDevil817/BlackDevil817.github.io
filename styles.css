@@ -6,7 +6,7 @@
   --paper-deep: #EEF2F6; /* Pale blue-gray containers */
   --white: #FFFFFF;
   --sage: #C9D4DF; /* Soft blue-gray */
-  --sage-dark: #A83A3A; /* Muted portfolio red */
+  --sage-dark: #7C3AED; /* Royal Violet accent */
   --peach: #A63A4B;
   --blue: #667A96; /* Desaturated blue */
   --line: rgba(11, 29, 58, 0.12); /* Navy alpha */
@@ -32,7 +32,7 @@
   --paper-deep: #1E293B; /* Navy slate dark block */
   --white: #111B2D; /* Card Slate dark */
   --sage: #475569;
-  --sage-dark: #EF4444; /* Vivid Dark Crimson */
+  --sage-dark: #A78BFA; /* Soft Violet accent */
   --peach: #F59E0B; /* Bright Amber */
   --blue: #8892B0;
   --line: rgba(241, 245, 249, 0.12);
