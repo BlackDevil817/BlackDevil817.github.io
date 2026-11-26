@@ -295,6 +295,42 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && chatPanel.classList.contains("open")) {
     chatCloseButton.click();
   }
+  if (event.key === "Escape" && certModal?.classList.contains("open")) {
+    closeCertModal();
+  }
+});
+
+const certModal = document.querySelector("#cert-modal");
+const certModalClose = document.querySelector("[data-close-cert-modal]");
+let certModalOpener;
+
+function openCertModal(opener) {
+  if (!certModal) return;
+  certModalOpener = opener;
+  certModal.classList.add("open");
+  certModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  certModalClose?.focus();
+}
+
+function closeCertModal() {
+  if (!certModal) return;
+  certModal.classList.remove("open");
+  certModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  certModalOpener?.focus();
+}
+
+document.querySelectorAll("[data-open-cert-modal]").forEach((button) => {
+  button.addEventListener("click", () => openCertModal(button));
+});
+
+certModalClose?.addEventListener("click", closeCertModal);
+
+certModal?.addEventListener("click", (event) => {
+  if (event.target === certModal) {
+    closeCertModal();
+  }
 });
 
 copyEmailButton?.addEventListener("click", async () => {

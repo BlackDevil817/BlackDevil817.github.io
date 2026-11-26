@@ -210,12 +210,11 @@
               and emergency services. Received a runner-up certificate.
             </p>
             <button
-              class="achievement-arrow"
               type="button"
-              aria-label="View Data Vista Certificate"
-              title="View Certificate"
-              style="background: none; border: none; cursor: pointer;"
-              onclick="document.getElementById('cert-modal').style.display='flex'"
+              class="achievement-arrow certificate-link"
+              data-open-cert-modal
+              aria-label="Open Data Vista runner-up certificate"
+              title="View certificate"
             >
               <span aria-hidden="true">↗</span>
             </button>
@@ -267,24 +266,27 @@
       </section>
 
       <!-- Certificate Modal with Blurred Background -->
-      <div 
-        id="cert-modal" 
-        style="display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); justify-content: center; align-items: center; padding: 1.5rem;"
-        onclick="if(event.target === this) this.style.display='none';"
+      <div
+        id="cert-modal"
+        class="cert-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Data Vista 2026 Certificate"
+        aria-hidden="true"
       >
-        <div style="position: relative; max-width: 90vw; max-height: 90vh; display: flex; justify-content: center; align-items: center;">
-          <button 
-            type="button" 
-            aria-label="Close modal" 
-            onclick="document.getElementById('cert-modal').style.display='none'"
-            style="position: absolute; top: -16px; right: -16px; z-index: 10; background: rgba(0, 0, 0, 0.75); color: #fff; border: 2px solid #fff; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center;"
+        <div class="cert-modal-content">
+          <button
+            type="button"
+            class="cert-modal-close"
+            data-close-cert-modal
+            aria-label="Close certificate modal"
           >
             ×
           </button>
-          <img 
-            src="./assets/Screenshot 2026-11-21 160902.jpg" 
+          <img
+            class="cert-modal-image"
+            src="./assets/data-vista-certificate.jpg"
             alt="Data Vista 2026 Certificate"
-            style="max-width: 100%; max-height: 85vh; width: auto; height: auto; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); object-fit: contain;"
           />
         </div>
       </div>
